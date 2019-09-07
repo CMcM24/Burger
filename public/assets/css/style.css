@@ -1,0 +1,43 @@
+body {
+    background-color: rgb(253, 191, 109);
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 40px;
+    color: white;
+}
+
+.burgPic {
+    width: 325px;
+    height: 284px;
+    padding: 10px;
+}
+
+.appTitle {
+    padding: 20px;
+}
+
+.theSubmit {
+    border: solid;
+}
+.eatThis {
+    border: solid;
+}
+.deleteThis {
+    border: solid;
+}
+
+.notEaten{
+    background-color: rgb(250, 74, 74);
+    border: solid;
+    color: white;
+    font-size: 20px;
+}
+.eaten{
+    background-color: rgb(73, 170, 35);
+    border: solid;
+    color: white;
+    font-size: 20px;
+}
+
+.inputBox {
+    font-size: 20px;
+}

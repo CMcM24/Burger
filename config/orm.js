@@ -41,6 +41,7 @@ var orm = {
 
     selectAll: (burgerTable, cb) => {
         var queryString = "SELECT * FROM " + burgerTable + ";";
+
         connection.query(queryString, function (err, result) {
             if (err) throw err;
             cb(result);
@@ -55,7 +56,24 @@ var orm = {
             cb(result);
         })
     },
-    updateOne: () => { },
+    updateOne: (burgerTable, colval, condition, cb) => {
+        var queryString = "UPDATE " + burgerTable + " SET " + objToSql(colval) + " WHERE " + condition;
+        console.log(queryString);
+
+        connection.query(queryString, function (err, result) {
+            if (err) throw err;
+            cb(result);
+        })
+    },
+    deleteOne: (burgerTable, condition, cb) => {
+        var queryString = "DELETE FROM " + burgerTable + " WHERE " + condition;
+
+        console.log(queryString);
+        connection.query(queryString, function(err, result){
+            if (err) throw err;
+            cb(result);
+        })
+    }
 
 };
 

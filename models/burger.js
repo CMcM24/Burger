@@ -11,7 +11,16 @@ var burger = {
             cb(res);
         });
     },
-    update: () => {},
+    update: (colval, condition, cb) => {
+        orm.updateOne("burgers", colval, condition, function(res){
+            cb(res);
+        })
+    },
+    delete: (condition, cb) => {
+        orm.deleteOne("burgers", condition, function(res){
+            cb(res);
+        });
+    }
 };
 
 
